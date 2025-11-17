@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: "Press Start 2P", cursive;
+    font-size:small;
+}
+
+:root {
+    --violetaPrincipal :rgb(100, 47, 150);
+    --violetaClaro: rgb(190, 129, 240);
+}
+header {
+    background-color:var(--violetaPrincipal);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logoConNombre {
+    width: 150px;
+    margin: 8px 20px;
+}
+.botonTema {
+    margin: 20px;
+}
+
+/*productos header*/
+#inputFiltro{
+    height: 20px;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 15px;
+}
+
+
+main {
+    min-height: 80vh;  /**/
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#entradaLogin {
+    padding: 40px 20px;
+    background-color: var(--violetaPrincipal);
+    flex-wrap: wrap;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    max-width: 450px;
+    
+}
+#entradaLogin h1, h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+#inputNombre {
+    width: 80%;
+    padding: 15px;
+    border-radius: 40px;
+    border-color: grey;
+    margin-bottom: 20px;
+    font-family: "Press Start 2P", cursive;
+    font-size: smaller;
+}
+#botonContinuar {
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Press Start 2P", cursive;
+    font-size: smaller;
+}
+footer {
+    background-color: var(--violetaPrincipal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.logoFooter {
+    width: 25px;
+    padding-right: 10px;
+}
