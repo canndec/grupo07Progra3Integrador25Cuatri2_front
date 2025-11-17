@@ -1,9 +1,15 @@
 * {
     margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
 }
 body {
     font-family: "Press Start 2P", cursive;
     font-size:small;
+    display: flex;
+    flex-direction: column;
 }
 
 :root {
@@ -34,6 +40,7 @@ header {
 
 
 main {
+    flex: 1;
     min-height: 80vh;  /**/
     flex-grow: 1;
     display: flex;
@@ -70,6 +77,44 @@ main {
     font-family: "Press Start 2P", cursive;
     font-size: smaller;
 }
+.gridProductos {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.card {
+    width: 120px;
+    height: 40px;
+    background-color: var(--violetaPrincipal);
+    border-radius: 5px;
+}
+
+.textoResumen {
+    color: white;
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
+
+.botonCarrito {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--violetaPrincipal);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.botonCarrito img {
+    width: 30px;
+    margin-top: 5px;
+}
 footer {
     background-color: var(--violetaPrincipal);
     display: flex;
@@ -83,3 +128,4 @@ footer {
     width: 25px;
     padding-right: 10px;
 }
+
