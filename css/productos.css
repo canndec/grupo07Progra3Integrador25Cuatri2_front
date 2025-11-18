@@ -1,0 +1,96 @@
+/*productos*/
+
+.contenedorPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contenedorFiltros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contenedorProductos {
+/*botones y cartas de prod*/
+    display: flex;
+    border: 2px solid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#gridProductos {
+/*contenedor de las cartas*/
+    /*margin-top: 100px;*/
+    /*margin-bottom: 100px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /*display: grid;        me tiro error no,  lo siguiente *****************************/
+    /*grid-template-columns: repeat(4, 1fr); /*******/
+    gap: 40px;
+    max-width: 1200px; /**/
+    border: 2px solid green;
+    margin: 0 auto;
+}
+#botonAtras, #botonSiguiente {
+/*contenedor de los botones (flechas)*/
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.botonDirecciones {
+    color: var(--violetaPrincipal);
+}
+
+.cartaProducto {
+    background-color: var(--violetaPrincipal);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartaProducto h3, .cartaProducto p, .productoBoton, .productoImagen {
+    padding: 8px;
+} 
+.productoImagen {
+    width: 150px;
+    height: auto;
+}
+
+.productoBoton {
+    padding: 5px;
+    border: 0;
+    border-radius: 20px;
+}
+
+.textoResumen {
+    color: white;
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
+
+.botonCarrito {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--violetaPrincipal);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.botonCarrito img {
+    width: 30px;
+    margin-top: 5px;
+}
