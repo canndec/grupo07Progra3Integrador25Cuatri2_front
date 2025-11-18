@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos de la tienda - JoyStiq</title>
     <link rel="icon" href="img/logoSinFondo.png" >
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!--este es el general-->
+    <link rel="stylesheet" href="css/productos.css"> <!--especifico de la vista-->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script defer src="js/main.js"></script>
+    <script defer src="js/productos.js"></script>
 </head>
 <body>
     <header>
@@ -16,24 +17,34 @@
         <input id="inputFiltro" type="text" placeholder="Busca productos...">
         <button class="botonTema"><!--<img src="img/logoTema.png" alt="tema-dispositivo">-->tema</button> 
     </header>
-    <main>
-        <h2>productos</h2>
-            <div class="gridProductos">
-
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-
-        </div>
-
+    <main class="contenedorPrincipal">
+        <!-- 
+        <div class="contenedorFiltros">
+            <h1>Productos</h1>
+            <button class="botonConsola" onclick="mostrarConsolas()">consolas</button>
+            <button class="botonJuegos" onclick="mostrarJuegos()">juegos</button>
+        </div>-->
+        <section class="contenedorProductos">
+                <div id="gridProductos">
+                    <!--
+                        <div class="cartaProducto"></div>                
+                        <div class="cartaProducto"></div>
+                        <div class="cartaProducto"></div>
+                        <div class="cartaProducto"></div>
+                        
+                        <div class="cartaProducto"></div>
+                        <div class="cartaProducto"></div>
+                        <div class="cartaProducto"></div>
+                        <div class="cartaProducto"></div>-->
+                    </div>
+                    <div class="contenedorBotones"> 
+                        <!--PONELE UNA IMAGEN O FLECHAS MASGRANDE NOSE-->
+                        <button id="botonAtras">⟵</button>
+                        <button id="botonSiguiente">⟶</button> 
+                    </div>
+        </section>
         <p class="textoResumen">resumen de carrito →</p>
-
+        
         <button class="botonCarrito">
             <img src="img/carrito.png " alt="icono-carrito">
         </button>
