@@ -1,9 +1,11 @@
 /*productos*/
 /*header*/
 
-/*#nombreCliente {
+#nombreDeCliente {
+    font-size: small;
     color: white;
-}*/
+    font-family: "Press Start 2P", cursive;
+}
 
 .contenedorPrincipal {
     display: flex;
@@ -73,11 +75,14 @@ botones y cartas de prod
     background-color: var(--violetaClaro);
     border-radius: 5px;
     padding: 10px;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 200px; /*para que sean todas iguales*/
-    height: 220px;
+
+    width: 200px;
+    height: 260px; /* FIJE EL BOTON ME ESTRESABA QUE SE MUEVA DEPENDE EL PRODUCTO ATT:SANTI */
 }
 .productoNombre, .cartaProducto p, .productoBoton, .productoImagen {
     font-size: small;
@@ -90,10 +95,26 @@ botones y cartas de prod
 }
 
 .productoBoton {
-    padding: 5px;
-    border: 0;
+    padding: 5px 10px;
+    border: none;
     border-radius: 20px;
+    background-color: var(--violetaPrincipal);  
+    color: white;                                
+    font-weight: bold;                           
+    cursor: pointer;                             /*—hace que el mouse cambie */
+    transition: background-color 0.2s, transform 0.1s;  
+}
 
+/*  efecto al pasar el mouse */
+.productoBoton:hover {
+    background-color: var(--violetaClaro);
+    transform: scale(1.05);
+}
+
+/*  efecto al apretar */
+.productoBoton:active {
+    background-color: var(--violetaOscuro); /* un violeta ma oscuro */
+    transform: scale(0.95);
 }
 
 .textoResumen {
@@ -102,12 +123,11 @@ botones y cartas de prod
     right: 80px;
     top: 20px;
 }
-
 .botonCarrito {
     position: fixed;
-    bottom: 40px;
+    bottom: 120px; /* SUbi */
     right: 40px;
-    background-color: var(--violetaPrincipal);
+    background-color: var(--violetaClaro);
     border: none;
     width: 60px;
     height: 60px;
@@ -118,4 +138,20 @@ botones y cartas de prod
 .botonCarrito img {
     width: 30px;
     margin-top: 5px;
+}
+.contadorCarrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: rgb(255, 78, 78);
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; 
 }
