@@ -1,27 +1,47 @@
 /*productos*/
+/*header*/
+
+/*#nombreCliente {
+    color: white;
+}*/
 
 .contenedorPrincipal {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+#tituloPrincipal {
+    color: black;
+    margin-top: 30px;
+}
+#botonesFiltroProd {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#botonConsolas, #botonJuegos {
+    margin: 10px;
+    padding: 7px;
+    padding-inline: 20px;
+    background-color: var(--violetaClaro);
+}
+/*
 .contenedorFiltros {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-}
+}*/
 
-.contenedorProductos {
-/*botones y cartas de prod*/
+/*.contenedorProductos {
+botones y cartas de prod
     display: flex;
     border: 2px solid;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+}*/
 #gridProductos {
 /*contenedor de las cartas*/
     /*margin-top: 100px;*/
@@ -50,25 +70,30 @@
 }
 
 .cartaProducto {
-    background-color: var(--violetaPrincipal);
+    background-color: var(--violetaClaro);
     border-radius: 5px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 200px; /*para que sean todas iguales*/
+    height: 220px;
 }
-.cartaProducto h3, .cartaProducto p, .productoBoton, .productoImagen {
+.productoNombre, .cartaProducto p, .productoBoton, .productoImagen {
+    font-size: small;
     padding: 8px;
 } 
+
 .productoImagen {
-    width: 150px;
-    height: auto;
+    width: 150px;/*todas mismo tamaño*/
+    height: 100px;
 }
 
 .productoBoton {
     padding: 5px;
     border: 0;
     border-radius: 20px;
+
 }
 
 .textoResumen {
