@@ -1,5 +1,5 @@
 let gridProductos = document.getElementById("gridProductos"); //contenedor de todos los productos
-let url = "http://localhost:3000"; 
+let url = "http://localhost:3500"; 
 let productos = []; //para tener una variable donde cargan los productos
 
 /*let filtroPorTexto = document.getElementById("inputTexto");//filtro busqueda
