@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos de la tienda - JoyStiq</title>
-    <link rel="icon" href="img/logoSinFondo.png" >
-    <link rel="stylesheet" href="css/style.css"> <!--este es el general-->
-    <link rel="stylesheet" href="css/productos.css"> <!--especifico de la vista-->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logoSinFondo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--este es el general-->
+    <link rel="stylesheet" href="css/productos.css" />
+    <!--especifico de la vista-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="js/productos.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img class="logoConNombre"src="img/logoSinFondoClaro.png" alt="JoyStiq-logo">
-            <!--<img id="lupa"src="img/lupa.png" alt="busqueda"> -->
-        <input id="inputFiltro" type="text" placeholder="Busca productos...">
-        <h1 id="nombreCliente"></h1>
-        <h2 class="textoResumen">resumen de carrito→</h2>
-        <button class="botonTema"><!--<img src="img/logoTema.png" alt="tema-dispositivo">-->tema</button> 
+      <img
+        class="logoConNombre"
+        src="img/logoSinFondoClaro.png"
+        alt="JoyStiq-logo"
+      />
+      <!--<img id="lupa"src="img/lupa.png" alt="busqueda"> -->
+      <input id="inputFiltro" type="text" placeholder="Busca productos..." />
+      <h1 id="nombreCliente"></h1>
+      <button class="botonTema">
+        <!--<img src="img/logoTema.png" alt="tema-dispositivo">-->tema
+      </button>
     </header>
-    <main >
-        <section class="contenedorPrincipal">
-            <h1 id="tituloPrincipal">Productos de la tienda JoyStiq</h1>
-            <div id="botonesFiltroProd">
-                <button id="botonConsolas">consolas</button>
-                <button id="botonJuegos">juegos</button>
-            </div>
-            <!--<section class="contenedorProductos">-->
-            <div id="gridProductos"><!--cartaProd--></div>
-                <div class="contenedorBotones"> 
-<!--PONELE UNA IMAGEN O FLECHAS MASGRANDE NOSE-->
-                    <button id="botonAtras">⟵</button>
-                    <button id="botonSiguiente">⟶</button> 
-                    </div>
-                <button class="botonCarrito">
-                    <img src="img/carrito.png" alt="icono-carrito">
-                </button>
-            </section>
-        </main>
-        <footer>
-            <img class="logoFooter"src="img/code-xml.png" alt="cod">
-            <p>Santiago Baez - Candela Corral</p>
-        </footer>
-        
-    </body>
+    <main>
+      <section class="contenedorPrincipal">
+        <h1 id="tituloPrincipal">Productos de la tienda JoyStiq</h1>
+
+        <div id="botonesFiltroProd">
+          <button id="botonConsolas">consolas</button>
+          <button id="botonJuegos">juegos</button>
+        </div>
+
+        <section class="contenedorProductos">
+          <div id="gridProductos"><!-- cartaProd --></div>
+        </section>
+
+        <div class="contenedorBotones">
+          <button id="botonAtras">
+            <img src="img/atras.png" alt="atras" />
+          </button>
+          <button id="botonSiguiente">
+            <img src="img/adelante.png" alt="siguiente" />
+          </button>
+        </div>
+
+        <button id="botonCarrito" class="botonCarrito">
+          <img src="img/carrito.png" alt="icono-carrito" />
+          <span id="contadorCarrito" class="contadorCarrito">0</span>
+        </button>
+      </section>
+    </main>
+    <footer>
+      <img class="logoFooter" src="img/code-xml.png" alt="cod" />
+      <p>Santiago Baez - Candela Corral</p>
+    </footer>
+  </body>
 </html>

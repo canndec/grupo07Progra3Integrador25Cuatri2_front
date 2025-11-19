@@ -1,0 +1,36 @@
+.contenedorCarrito {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#carritoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.itemCarrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--violetaClaro);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.itemCarrito img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.itemCarrito h3 {
+    flex: 1;
+    margin-left: 20px;
+}
+
+#totalCarrito {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+}

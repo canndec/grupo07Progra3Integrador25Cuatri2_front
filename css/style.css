@@ -1,6 +1,7 @@
 :root {
     --violetaPrincipal :rgb(100, 47, 150);
     --violetaClaro: rgb(157, 121, 241);
+    --violetaOscuro:  #5e319d; /*LO QUE ES LA TECNOLOGIA*/
 }
 * {
     margin: 0;
