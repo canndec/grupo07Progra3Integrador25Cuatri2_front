@@ -13,47 +13,35 @@
 <body>
     <header>
         <img class="logoConNombre"src="img/logoSinFondoClaro.png" alt="JoyStiq-logo">
-        <!--<img id="lupa"src="img/lupa.png" alt="busqueda"> -->
+            <!--<img id="lupa"src="img/lupa.png" alt="busqueda"> -->
         <input id="inputFiltro" type="text" placeholder="Busca productos...">
+        <h1 id="nombreCliente"></h1>
+        <h2 class="textoResumen">resumen de carrito→</h2>
         <button class="botonTema"><!--<img src="img/logoTema.png" alt="tema-dispositivo">-->tema</button> 
     </header>
-    <main class="contenedorPrincipal">
-        <!-- 
-        <div class="contenedorFiltros">
-            <h1>Productos</h1>
-            <button class="botonConsola" onclick="mostrarConsolas()">consolas</button>
-            <button class="botonJuegos" onclick="mostrarJuegos()">juegos</button>
-        </div>-->
-        <section class="contenedorProductos">
-                <div id="gridProductos">
-                    <!--
-                        <div class="cartaProducto"></div>                
-                        <div class="cartaProducto"></div>
-                        <div class="cartaProducto"></div>
-                        <div class="cartaProducto"></div>
-                        
-                        <div class="cartaProducto"></div>
-                        <div class="cartaProducto"></div>
-                        <div class="cartaProducto"></div>
-                        <div class="cartaProducto"></div>-->
+    <main >
+        <section class="contenedorPrincipal">
+            <h1 id="tituloPrincipal">Productos de la tienda JoyStiq</h1>
+            <div id="botonesFiltroProd">
+                <button id="botonConsolas">consolas</button>
+                <button id="botonJuegos">juegos</button>
+            </div>
+            <!--<section class="contenedorProductos">-->
+            <div id="gridProductos"><!--cartaProd--></div>
+                <div class="contenedorBotones"> 
+<!--PONELE UNA IMAGEN O FLECHAS MASGRANDE NOSE-->
+                    <button id="botonAtras">⟵</button>
+                    <button id="botonSiguiente">⟶</button> 
                     </div>
-                    <div class="contenedorBotones"> 
-                        <!--PONELE UNA IMAGEN O FLECHAS MASGRANDE NOSE-->
-                        <button id="botonAtras">⟵</button>
-                        <button id="botonSiguiente">⟶</button> 
-                    </div>
-        </section>
-        <p class="textoResumen">resumen de carrito →</p>
+                <button class="botonCarrito">
+                    <img src="img/carrito.png" alt="icono-carrito">
+                </button>
+            </section>
+        </main>
+        <footer>
+            <img class="logoFooter"src="img/code-xml.png" alt="cod">
+            <p>Santiago Baez - Candela Corral</p>
+        </footer>
         
-        <button class="botonCarrito">
-            <img src="img/carrito.png " alt="icono-carrito">
-        </button>
-    </div>
-    </main>
-    <footer>
-        <img class="logoFooter"src="img/code-xml.png"" alt="cod">
-        <p>Santiago Baez - Candela Corral</p>
-    </footer>
-
-</body>
+    </body>
 </html>

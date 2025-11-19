@@ -7,25 +7,25 @@
     <link rel="icon" href="img/logoSinFondo.png" >
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script defer src="js/login.js"></script>
+    <script src="js/login.js" defer></script> 
 </head>
 
 <body>
     <header>
         <img class="logoConNombre"src="img/logoSinFondoClaro.png" alt="JoyStiq-logo">
         <button class="botonTema"><!--<<img src="img/sun_light_mode_icon_230598.png" alt="tema">>-->Tema</button>        
+        
+    </header>
+    <main>
+        <section id="entradaLogin">
+            <h1>Bienvenido</h1>
+            <form id="formIngreso"> <!--action="productos.html"action: redirecciona a la otra pagina-->
+                <input id="inputNombre"type="text" placeholder="Ingrese su nombre..." autocomplete="off"> <!--autocomplete justamente para que no salten nombres anteriores-->
+                <button id="botonContinuar">Continuar</button>
+            </form>
+        </section>
+    </main>
     
-</header>
-<main>
-    <section id="entradaLogin">
-        <h1>Bienvenido</h1>
-        <form id="formIngreso" action="productos.html" > <!--action: redirecciona a la otra pagina-->
-            <input id="inputNombre"type="text" placeholder="Ingrese su nombre..." autocomplete="off"> <!--autocomplete justamente para que no salten nombres anteriores-->
-            <button id="botonContinuar">Continuar</button>
-        </form>
-    </section>
-</main>
-
     <footer>
         <img class="logoFooter"src="img/code-xml.png"" alt="cod">
         <p>Santiago Baez - Candela Corral</p>
