@@ -26,8 +26,12 @@ function mostrarCarrito() {
                 <p $ ${item.precio}</p>
                 <p> x${item.cantidad}</p>
                 <p>Subtotal: $${subtotal}</p>
-                <button onclick="eliminar(${index})">Eliminar</button>
+                <div class="cantidadControles">
+                <button onclick="restar(${index})">-</button>
+                <span> ${item.cantidad} </span>
+                <button onclick="sumar(${index})">+</button>
             </div>
+            <button onclick="eliminar(${index})">Eliminar</button>
         `;
     });
 
@@ -36,6 +40,22 @@ function mostrarCarrito() {
 
 function eliminar(index) {
     carrito.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+}
+function sumar(index) {
+    carrito[index].cantidad++;
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+}
+
+function restar(index) {
+    carrito[index].cantidad--;
+
+    if (carrito[index].cantidad <= 0) {
+        carrito.splice(index, 1);
+    }
+
     localStorage.setItem("carrito", JSON.stringify(carrito));
     mostrarCarrito();
 }
