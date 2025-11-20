@@ -1,5 +1,6 @@
 :root {
     --rojoBorrar: rgb(255, 0, 0);
+    --verdeFinalizar:  rgb(48, 160, 48);
 }
 
 .contenedorCarrito {
@@ -92,4 +93,8 @@ main button:active {
 
 #vaciarCarrito:hover {
     background-color: rgb(240, 40, 40);
+}
+
+#botonFinalizar {
+    background-color: var(--verdeFinalizar);
 }
