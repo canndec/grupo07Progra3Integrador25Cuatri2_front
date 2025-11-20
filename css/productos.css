@@ -21,11 +21,14 @@
     justify-content: center;
     padding: 10px;
 }
-#botonConsolas, #botonJuegos {
+#botonConsolas, #botonJuegos, #botonTodo {
     margin: 10px;
     padding: 7px;
     padding-inline: 20px;
     background-color: var(--violetaClaro);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /*cambia el logito del mouse*/
 }
 /*
 .contenedorFiltros {
@@ -56,7 +59,6 @@ botones y cartas de prod
     /*grid-template-columns: repeat(4, 1fr); /*******/
     gap: 40px;
     max-width: 1200px; /**/
-    border: 2px solid green;
     margin: 0 auto;
 }
 #botonAtras, #botonSiguiente {
@@ -73,7 +75,7 @@ botones y cartas de prod
 
 .cartaProducto {
     background-color: var(--violetaClaro);
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
 
     display: flex;
@@ -81,17 +83,20 @@ botones y cartas de prod
     justify-content: space-between;
     align-items: center;
 
-    width: 200px;
-    height: 260px; /* FIJE EL BOTON ME ESTRESABA QUE SE MUEVA DEPENDE EL PRODUCTO ATT:SANTI */
+    width: 220px;
+    height: 280px; /* FIJE EL BOTON ME ESTRESABA QUE SE MUEVA DEPENDE EL PRODUCTO ATT:SANTI */
 }
-.productoNombre, .cartaProducto p, .productoBoton, .productoImagen {
-    font-size: small;
-    padding: 8px;
+.productoNombre, .cartaProducto h3, .cartaProducto p, .productoBoton, .productoImagen {
+    font-size:small;
+    padding: 5px;
+    font-family: "Lexend Exa", sans-serif;
 } 
 
+
 .productoImagen {
-    width: 150px;/*todas mismo tamaño*/
-    height: 100px;
+    width: 100px;/*todas mismo tamaño*/
+    height: 150px;
+    border: 5px solid red;
 }
 
 .productoBoton {

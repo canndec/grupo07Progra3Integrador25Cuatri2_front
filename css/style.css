@@ -2,6 +2,7 @@
     --violetaPrincipal :rgb(100, 47, 150);
     --violetaClaro: rgb(157, 121, 241);
     --violetaOscuro:  #5e319d; /*LO QUE ES LA TECNOLOGIA*/
+    
 }
 * {
     margin: 0;
@@ -17,7 +18,7 @@ body {
     flex-direction: column;
 }
 
-h1, h2, h3, p, #botonConsolas, #botonJuegos{
+h1, h2, h3, p, #botonConsolas, #botonJuegos, #botonTodo {
     font-size:smaller;
     color: white;
     font-family: "Press Start 2P", cursive;
