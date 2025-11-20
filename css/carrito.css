@@ -50,8 +50,46 @@
 }
 
 #totalCarrito {
-    font-size: 22px;
+    font-size: 15px;
     margin-top: 20px;
     font-weight: bold;
     color: black;
+}
+/* botones principales */
+#vaciarCarrito,
+.volverProductos,
+main button {
+    background-color: var(--violetaPrincipal);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 10px 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    transition: background-color .2s, transform .1s;
+}
+
+/* hover */
+#vaciarCarrito:hover,
+main button:hover {
+    background-color: var(--violetaClaro);
+    transform: translateY(-2px);
+}
+
+/* active */
+#vaciarCarrito:active,
+main button:active {
+    background-color: var(--violetaOscuro);
+    transform: scale(0.95);
+}
+
+/* botón de vacío en rojo */
+#vaciarCarrito {
+    background-color: rgb(255, 78, 78);
+}
+
+#vaciarCarrito:hover {
+    background-color: rgb(240, 40, 40);
 }
