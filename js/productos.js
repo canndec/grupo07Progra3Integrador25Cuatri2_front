@@ -45,6 +45,13 @@ botonParaJuegos.addEventListener("click", function(){
     mostrarProductos(juegos);
 });
 
+let botonTodosProd = document.getElementById("botonTodo")
+botonTodosProd.addEventListener("click", function(){
+    mostrarProductos(productos);
+})
+
+
+
 let posicion = 0; //de donde empieza que despues va a incrementar cuando se seleccione la flechita
 let limiteAMostrar = 4; //limite de productos a mostrar para paginacion
 
@@ -57,22 +64,24 @@ function mostrarProductos(array){
             <img class="productoImagen"src="${p.imagen}" alt="${p.nombre}">
             <h3>${p.nombre}</h3>
             <p>$${p.precio}</p>
-            <button class="productoBoton" onclick="agregarACarrito(${p.id})">Agregar al carrito</button>
+            <p> ${hayStock(p.activo)}</p>  
+            <button class="productoBoton" onclick="agregarACarrito(${p.id}, ${p.activo})">Agregar al carrito</button>
         </div>`).join(""); 
+
+// NO SE SI OBLIGATORIAMENTE NO SE TIENE Q MOSTRAR EL PROD , o que con no hay stock tabien
+
             //aca solo muestra los productos hasta "limite" puesto
         gridProductos.innerHTML = htmlProductos !== "" ? htmlProductos : `<p>No se encontraron productos</p>`;
-        /*if(p.activo == 1){
-        mostrarDetalles();
-        }});*/
-        //solo muestra los productos que estan activos
 }
-
+function hayStock(activo){
+    return activo == 1 ? `Disponible` : `No hay stock`;
+}
 
 //esto es para la paginacion
 let botonAtras = document.getElementById("botonAtras");
 let botonSiguiente = document.getElementById("botonSiguiente");
 
-
+//////////////////////////////////
 botonAtras.addEventListener("click",function(){
     if (posicion >= limiteAMostrar) {
         posicion -= limiteAMostrar;
@@ -95,20 +104,20 @@ let cantidadProducto = [];
 
 let botonCarrito = document.getElementById("botonCarrito");
 botonCarrito.addEventListener("click", () => {
-    window.location.href = "carrito.html";
+    window.location.href = "carrito.html"; //cambia de vista
 });
 
-function agregarACarrito(id) {
-    let producto = productos.find(p => p.id == id);
-    if (!producto) return;
+function agregarACarrito(id,  activo) {
+    let producto = productos.find(p => p.id == id); //hay producto con id
+    if (!producto || activo === 0) return; //si no ta activo no agrega
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     let existe = carrito.find(item => item.id == id);
-
+    
     if (existe) {
-        existe.cantidad++;
-    } else {
+        existe.cantidad++; //suma 1 al prod
+    } else { //prod nuevo
         carrito.push({
             id: producto.id,
             nombre: producto.nombre,
@@ -124,7 +133,7 @@ function agregarACarrito(id) {
 
     console.log("Carrito actualizado", carrito);
 }
-window.agregarACarrito = agregarACarrito;
+window.agregarACarrito = agregarACarrito; //
 
 function actualizarContadorCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -135,7 +144,7 @@ function actualizarContadorCarrito() {
 
 function init(){
     obtenerProductos();
-    actualizarContadorCarrito(); // <<< AGREGUE el CONTADOR!! Y SAQUE LO QUE TENIAS
+    actualizarContadorCarrito(); // <<< AGREGUE el CONTADOR!! Y SAQUE LO QUE TENIAS ---nao nao
 
 }
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", init); ///
