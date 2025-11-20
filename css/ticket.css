@@ -1,0 +1,13 @@
+.ticket {
+    border: 2px solid;
+    margin: 150px;
+}
+.ticketTitulo, .ticket p, #numeroPedido, .ticket h3 {
+    color: black;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 180px;
+}

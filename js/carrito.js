@@ -23,8 +23,8 @@ function mostrarCarrito() {
             <div class="itemCarrito">
                 <img src="${item.imagen}" alt="${item.nombre}" />
                 <h3>${item.nombre}</h3>
-                <p>Precio: $${item.precio}</p>
-                <p>Cantidad: ${item.cantidad}</p>
+                <p $ ${item.precio}</p>
+                <p> x${item.cantidad}</p>
                 <p>Subtotal: $${subtotal}</p>
                 <button onclick="eliminar(${index})">Eliminar</button>
             </div>
