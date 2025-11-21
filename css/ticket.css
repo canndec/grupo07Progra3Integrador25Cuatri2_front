@@ -1,13 +1,31 @@
 .ticket {
     border: 2px solid;
-    margin: 150px;
+    margin: 40px auto;
+    width: 600px;
+    max-height: 500px;
 }
 .ticketTitulo, .ticket p, #numeroPedido, .ticket h3 {
     color: black;
-    font-size: large;
+    font-size: small;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 180px;
+    padding: 15px 100px;
+}
+
+/*ticket*/
+#productosTicket p {
+    display: flex;
+    /*justify-content: space-between;*/
+}
+.nombreProducto {
+    /*padding-right: 20px;*/
+}
+.infoProductoTicket {
+    display: flex;
+    justify-content: center;
+    
+    border: 2px solid;
+    
 }
