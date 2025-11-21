@@ -71,7 +71,7 @@ function mostrarProductos(array){
 // NO SE SI OBLIGATORIAMENTE NO SE TIENE Q MOSTRAR EL PROD , o que con no hay stock tabien
 
             //aca solo muestra los productos hasta "limite" puesto
-        gridProductos.innerHTML = htmlProductos !== "" ? htmlProductos : `<p>No se encontraron productos</p>`;
+    gridProductos.innerHTML = htmlProductos !== "" ? htmlProductos : `<p>No se encontraron productos</p>`;
 }
 function hayStock(activo){
     return activo == 1 ? `Disponible` : `No hay stock`;

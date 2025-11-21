@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/ticket.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer src="js/ticket.js"></script>
 </head>
 <body>
     <header>
@@ -18,16 +19,19 @@
         <section>
             <div class="ticket">
                 <h1 class="ticketTitulo">JoyStiq</h1>
-                <p>Fecha y hora</p> <!--traido de js tamb-->
-                <h2 id="numeroPedido"></h2> <!--manejo en js-->
-                <p>Cliente: </p> <!-- " " -->
+                <p id="fechaTicket">Fecha y hora</p> <!--traido de js tamb-->
+                <h2 id="numeroPedido">N°Pedido:(autoincremental)</h2> <!--manejo en js-->
+                <p id="clienteTicket"></p> <!-- " " -->
                 <h2 class="ticketTitulo">Productos</h2>
+                <div id="productosTicket"></div>
                 <!-- productos del carrito-->
-                <p>Total: </p> <!-- de js-->
+                <p id="subtotalTicket">$</p>
+                <p id="totalTicket">Total: 0 </p> <!-- de js-->
                 <h3>¡Muchas gracias por su compra!</h3>
             </div>
-            <button>Descargar PDF</button>
-            <button>Finalizar</button>
+            <button class="botonDescargar">Descargar .PDF</button>
+            <button class="botonDescargar">Descargar .excel</button>
+            <button class="botonFinalizar">Finalizar</button>
 
 
         </section>

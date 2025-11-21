@@ -14,7 +14,7 @@ function mostrarCarrito() {
     }
 
     let total = 0;
-
+    console.table(carrito);
     carrito.forEach((item, index) => {
         let subtotal = item.precio * item.cantidad;
         total += subtotal;
