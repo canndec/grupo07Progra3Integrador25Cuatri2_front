@@ -1,14 +1,21 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-let contenedor = document.getElementById("carritoContainer");
+let contenedor = document.getElementById("carritoContenedor");
 let totalCarrito = document.getElementById("totalCarrito");
 let botonVaciar = document.getElementById("vaciarCarrito");
-
+let botonFinalizar = document.getElementById("botonFinalizar");
 function mostrarCarrito() {
     contenedor.innerHTML = "";
 
     if (carrito.length === 0) {
-        contenedor.innerHTML = "<p>Tu carrito está vacío</p>";
+        contenedor.innerHTML = `
+                            <div id="contenedorCarritoVacio"> 
+                            <p>Tu carrito está vacío</p>
+                            <img src="img/carritoVacio.png" alt="carritoVacio">
+                            </div>`; //tiene el mismo id que el contendor(section id="carritoContenedor") porque se sobreescribe
+        botonFinalizar.disabled = true; // lo desabilita pa tocar
+        botonVaciar.disabled = true; //lo desabilita y se activa la opcion en css
+        contenedor.disabled = true;
         totalCarrito.textContent = "";
         return;
     }

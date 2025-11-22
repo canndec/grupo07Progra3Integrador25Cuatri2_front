@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda JoyStiq - Carrito</title>
     <link rel="icon" href="img/logoSinFondo.png">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrito.css">     
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -17,17 +17,18 @@
         <button class="botonTema"><!--<<img src="img/sun_light_mode_icon_230598.png" alt="tema">>-->Tema</button>        
     </header>
 
-    <main class="contenedorCarrito">
-        <h1>Tu carrito</h1>
-
-        <section id="carritoContainer"></section>
+    <main class="contenedorCarrito"> <!--contiene al carrito-->
+        <!--<h1>Tu carrito</h1>-->
+        <section id="carritoContenedor"><!--todos los prod--></section> <!--contiene lo que tiene el carrito-->
 
         <p id="totalCarrito"></p>
 
-        <button id="vaciarCarrito">Vaciar carrito</button>
-        <button onclick="window.location.href='productos.html'">Volver a productos</button>
-
-        <button class="botonFinalizar" onclick="window.location.href=`ticket.html`">Finalizar Compra</button>
+        <div id="contenedorBotonesCarrito">
+            <button id="vaciarCarrito">Vaciar carrito</button>
+            <button class="volverProductos" onclick="window.location.href='productos.html'">Volver a productos</button>
+            
+            <button id="botonFinalizar" class="botonFinalizar" onclick="window.location.href=`ticket.html`">Finalizar Compra</button>
+        </div>
     </main>
 
     <footer>

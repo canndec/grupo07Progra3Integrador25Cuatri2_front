@@ -1,18 +1,50 @@
 :root {
     --rojoBorrar: rgb(255, 0, 0);
+    --rojoVaciar: rgb(255, 78, 78);
+    --rojoVaciarFuerte: rgb(240, 40, 40);
     --verdeFinalizar:  rgb(48, 160, 48);
+    --verdeClaro: rgb(71, 196, 71);
+    --verdeOscuro: rgb(28, 175, 28);
+
+    --grisVioleta: rgb(208, 189, 219);
+
 }
 
 .contenedorCarrito {
-    max-width: 900px;
-    margin: 30px 200px;
+    /*max-width: 900px;*/
+    margin: 30px 80px;
     text-align: center;
 }
 
-#carritoContainer {
+/*cuando esta lleno*/
+#carritoContenedor {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin: auto;
+}
+#carritoContenedor p, h1 {
+    color: black;
+}
+
+#contenedorCarritoVacio img {
+    margin: auto;
+    width: 150px;
+}
+
+/*carritoVacio*/ 
+#contenedorCarritoVacio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 25px;
+    width: 800px;
+    height: 280px;
+    background-color: var(--grisVioleta);
+}
+#contenedorCarritoVacio p {
+    margin-top: 20px;
 }
 
 .itemCarrito {
@@ -33,8 +65,8 @@
 .itemCarrito button{
     padding: 5px 7px;
     border-radius: 5px;
-    border-color: var(--rojoBorrar);
-    color: var(--rojoBorrar);
+    border-color: var(--rojoVaciarFuerte);
+    color: var(--rojoVaciarFuerte);
     background-color: rgb(255, 247, 247);
     font-family: "Press Start 2P", cursive;
     font-size: x-small;
@@ -56,11 +88,26 @@
     font-weight: bold;
     color: black;
 }
-/* botones principales */
-#vaciarCarrito,
-.volverProductos,
+
+
+/*BOTONESSSSS - ordené por que se pisaban los estilos*/
+
+/*el active es completo necesario? si cuando se clickea al toke hace la 
+accion que encima son cambio de vistas*/
+
+#contenedorBotonesCarrito {
+    border: 2px solid blue;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-left: auto; /*to a la derecha*/
+}
+
+
+
+
+/*solo estilo general de todos los botones*/
 main button {
-    background-color: var(--violetaPrincipal);
     color: white;
     border: none;
     padding: 12px 22px;
@@ -72,29 +119,52 @@ main button {
     transition: background-color .2s, transform .1s;
 }
 
-/* hover */
-#vaciarCarrito:hover,
-main button:hover {
-    background-color: var(--violetaClaro);
-    transform: translateY(-2px);
+#vaciarCarrito {
+    background-color: var(--rojoVaciarFuerte) ;
 }
 
-/* active */
-#vaciarCarrito:active,
-main button:active {
-    background-color: var(--violetaOscuro);
+#vaciarCarrito:hover { 
+    background-color: var(--rojoVaciar);
+    transform: translateY(-2px); /*.....*/
+}
+
+#vaciarCarrito:active {
+    background-color: var(--rojoBorrar);
+    transform: scale(0.95);
+}
+#vaciarCarrito:disabled {
+    background-color: var(--rojoVaciar);
+    cursor:not-allowed;
+    transform: none;
+}
+
+.volverProductos {
+    background-color: var(--violetaPrincipal);
+}
+
+.volverProductos:hover {
+    background-color: var(--violetaClaro);
+}
+
+.volverProductos:active {
+    background-color: var(violetaOscuro);
     transform: scale(0.95);
 }
 
-/* botón de vacío en rojo */
-#vaciarCarrito {
-    background-color: rgb(255, 78, 78);
-}
-
-#vaciarCarrito:hover {
-    background-color: rgb(240, 40, 40);
-}
-
-#botonFinalizar {
+.botonFinalizar {
     background-color: var(--verdeFinalizar);
+}
+
+.botonFinalizar:hover {
+    background-color:var(--verdeClaro);
+}
+
+.botonFinalizar:active {
+    background-color: var(--verdeOscuro);
+}
+
+.botonFinalizar:disabled {
+    background-color: var(--verdeClaro);
+    cursor: not-allowed;
+    transform: none;
 }
