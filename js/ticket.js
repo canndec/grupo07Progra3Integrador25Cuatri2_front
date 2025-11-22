@@ -18,24 +18,23 @@ function mostrarProductosTicket(){
         total += subtotal;
 
         html += `
-        <div class="infoProductoTicket">
-        <p class="nombreProducto">${p.nombre} </p>
-        <p>x${p.cantidad}</p>
-        <p>$${subtotal}</p>
+        <div id="contenedorDeProducto">
+        <p class="descripcionProducto">${p.nombre} </p>
+        <p class="descripcionProducto">x${p.cantidad}  $${subtotal}</p>
         </div>
         `
     });
-
+    
+    //<p class="descripcionProducto"></p>
     let fecha = new Date().toLocaleString();
     fechaTicket.textContent = fecha;
     localStorage.setItem("fecha", JSON.stringify(fecha)); // no se si deberia estar aca o en la de carrito
 
 
-    clienteTicket.textContent = `Cliente: ${nombreDeCliente}`;
+    clienteTicket.textContent = `Cliente: ${nombreDeCliente.toUpperCase()}`;
     totalTicket.textContent = `Total: $${total}`;
 
     productosTicket.innerHTML = html;
 }
-//<p></p>
 
 mostrarProductosTicket();
