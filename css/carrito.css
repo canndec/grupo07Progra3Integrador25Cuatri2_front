@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--violetaClaro);
+    background: var(--violetaTransparente);
     padding: 15px;
     border-radius: 10px;
 }
@@ -96,15 +96,11 @@
 accion que encima son cambio de vistas*/
 
 #contenedorBotonesCarrito {
-    border: 2px solid blue;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     margin-left: auto; /*to a la derecha*/
 }
-
-
-
 
 /*solo estilo general de todos los botones*/
 main button {
@@ -125,7 +121,7 @@ main button {
 
 #vaciarCarrito:hover { 
     background-color: var(--rojoVaciar);
-    transform: translateY(-2px); /*.....*/
+    transform: translateY(-2px); /*...comom un movimiento en eje y..*/
 }
 
 #vaciarCarrito:active {
@@ -143,7 +139,8 @@ main button {
 }
 
 .volverProductos:hover {
-    background-color: var(--violetaClaro);
+    background-color: var(--violetaTransparente);
+    transform: translateY(-2px);
 }
 
 .volverProductos:active {
@@ -157,10 +154,12 @@ main button {
 
 .botonFinalizar:hover {
     background-color:var(--verdeClaro);
+    transform: translateY(-2px);
 }
 
 .botonFinalizar:active {
     background-color: var(--verdeOscuro);
+    transform: scale(0.95);
 }
 
 .botonFinalizar:disabled {

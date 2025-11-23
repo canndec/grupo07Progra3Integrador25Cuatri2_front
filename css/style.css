@@ -2,7 +2,9 @@
     --violetaPrincipal :rgb(100, 47, 150);
     --violetaClaro: rgb(157, 121, 241);
     --violetaOscuro:  #5e319d; /*LO QUE ES LA TECNOLOGIA*/
-    
+    --violetaTransparente : rgba(100, 47, 150, 0.692);
+
+
 }
 * {
     margin: 0;
@@ -24,7 +26,7 @@ h1, h2, h3, p, #botonConsolas, #botonJuegos, #botonTodo {
     font-family: "Press Start 2P", cursive;
 }
 header {
-    background-color:var(--violetaPrincipal);
+    background-color:var(--violetaTransparente);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,9 +38,16 @@ header {
     margin: 8px 20px;
 }
 .botonTema {
-    margin: 20px;
+    margin: 20px 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
-
+.botonTema img{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
 /*productos header*/
 #inputFiltro{
     height: 20px;
@@ -58,7 +67,7 @@ main {
 }
 #entradaLogin {
     padding: 40px 20px;
-    background-color: var(--violetaPrincipal);
+    background-color: var(--violetaTransparente);
     flex-wrap: wrap;
     width: 90%;
     display: flex;
@@ -78,10 +87,12 @@ main {
     margin-bottom: 20px;
     font-family: "Press Start 2P", cursive;
     font-size: smaller;
+    border: none;
 }
 #botonContinuar {
     padding: 10px;
     border-radius: 20px;
+    border: none;
     cursor: pointer;
     font-family: "Press Start 2P", cursive;
     font-size: smaller;
@@ -89,7 +100,7 @@ main {
 
 
 footer {
-    background-color: var(--violetaPrincipal);
+    background-color: var(--violetaTransparente);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,5 +111,6 @@ footer {
 .logoFooter {
     width: 25px;
     padding-right: 10px;
+    filter: invert(100%);
 }
 

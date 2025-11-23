@@ -8,7 +8,10 @@ let subtotalTicket = document.getElementById("subtotalTicket");
 let totalTicket = document.getElementById("totalTicket");
 let clienteTicket = document.getElementById("clienteTicket");
 
-console.table(carrito);
+let descargarPdf = document.getElementById("descargarPdf");
+let descargarExcel = document.getElementById("descargarExcel");
+let finalizarCompra = document.getElementById("botonFinalizar"); 
+
 function mostrarProductosTicket(){
     html = "";
     total = 0;
@@ -37,4 +40,23 @@ function mostrarProductosTicket(){
     productosTicket.innerHTML = html;
 }
 
+descargarPdf.addEventListener("click", function() {
+    alert("Descargando ticket en formato PDF");
+});
+
+descargarExcel.addEventListener("click", function(){
+    alert("Descargando ticket en formto EXCEL");
+});
+
+finalizarCompra.addEventListener("click", function(){
+    /*agregar info a tabla de bd . en ventas y ventas_productos
+    - ventas: id, nombre_usuario, fecha, monto_total
+    - ventas-productos: id_venta, id_producto*/
+    window.location.href=`index.html`;
+    
+    /* TODO ESTO LO TENGO QUE HACER DESDE EL BACK ASI Q KEDA EN PAUSA ****
+    let sqlVentas = `INSERT INTO ventas (nombre_usuario, fecha, monto_total) VALUES (?, ?, ?)`;
+    return connection.query(sqlVentas, [nombreDeCliente,fecha,total]);
+    let sqlVentasProductos = `INSERT INTO ventas_productos ()`*/
+});
 mostrarProductosTicket();
