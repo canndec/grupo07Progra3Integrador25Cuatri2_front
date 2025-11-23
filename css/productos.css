@@ -34,8 +34,8 @@
 .buscador {
     position: relative;
     width: 300px;
-    display: flex;            /* ← AGREGAR */
-    align-items: center;      /* ← AGREGAR */
+    display: flex;           
+    align-items: center;     
 }
 .botonBuscar img {
     width: 18px;
@@ -47,11 +47,11 @@
     border: none;
     background: none;
     padding: 0;
-    margin-left: -35px;       /* ← PARA QUE ENTRE EN EL INPUT */
+    margin-left: -35px;      
     cursor: pointer;
-    display: flex;            /* ← AGREGAR */
-    align-items: center;      /* ← AGREGAR */
-    justify-content: center;  /* ← AGREGAR */
+    display: flex;           
+    align-items: center;      
+    justify-content: center;  
 }
 
 #inputFiltro {
@@ -97,16 +97,39 @@
     max-width: 1200px; /**/
     margin: 0 auto;
 }
-#botonAtras, #botonSiguiente {
-/*contenedor de los botones (flechas)*/
-    background-color: rgb(255, 255, 255);
-    width: 20px;
-    height: 20px;
+.contenedorBotones {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;   /* los pone centrados */
+    align-items: center;
+    gap: 12px;                 /* separacion entre botones */
+    margin-top: 10px;
 }
-.botonDirecciones {
-    color: var(--violetaPrincipal);
+
+#botonAtras,
+#botonSiguiente {
+    background-color: transparent; 
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 40px;               /* tamaño del boton */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* la imagen de adentro */
+#botonAtras img,
+#botonSiguiente img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* mantiene proporciones */
+    transition: transform 0.15s ease;
+}
+
+#botonAtras img:hover,
+#botonSiguiente img:hover {
+    transform: scale(1.12);    /* efecto suave */
 }
 
 .cartaProducto {
