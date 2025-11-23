@@ -14,10 +14,11 @@
 <body>
     <header>
         <img class="logoConNombre"src="img/logoSinFondoClaro.png" alt="JoyStiq-logo">
-        <button class="botonTema"><!--<<img src="img/sun_light_mode_icon_230598.png" alt="tema">>-->Tema</button>        
+        <button class="botonTema"><img src="img/modoOscuro.png" alt="TemaDispositivo"></button>          
     </header>
     <main>
         <section id="contenedorTicket"> 
+            <div id="ticket">
                 <div id="infoGeneralTicket">  <!-- no se si importa q este esto ah-->
                     <h1 class="ticketTitulo">JoyStiq</h1>
                     <p id="fechaTicket">Fecha y hora</p> <!--traido de js tamb-->
@@ -27,27 +28,25 @@
                     </div>
                 </div>
                 <div id="infoProductosTicket">
-                    <h2 class="ticketTitulo">Productos</h2>
                     <div id="productosTicket"> 
                         <!-- productos del carrito-->
                     </div>
                     <p id="subtotalTicket">$</p>
                     <p id="totalTicket">Total: 0 </p> <!-- de js-->
+                    <h3 id="agradecimientoTicket">¡Muchas gracias por su compra!</h3>
                 </div>
-                <h3 id="agradecimientoTicket">¡Muchas gracias por su compra!</h3>
+            </div>
                 <div id="contenedorBotonesFinalizar">     
-                    <button class="botonDescargar">Descargar .PDF</button>
-                    <button class="botonDescargar">Descargar .excel</button>
-                    <button class="botonFinalizar">Finalizar</button>
+                    <button class="botonDescargar" id="descargarPdf">Descargar .PDF</button>
+                    <button class="botonDescargar" id="descargarExcel">Descargar .excel</button>
+                    <button id="botonFinalizar" >Finalizar</button>
                 </div>    
             </section>
                 
     </main>
-    <!-- 
         <footer>
             <img class="logoFooter"src="img/code-xml.png"" alt="cod">
             <p>Santiago Baez - Candela Corral</p>
         </footer>
-        -->
 </body>
 </html>

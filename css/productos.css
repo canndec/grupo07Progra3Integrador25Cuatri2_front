@@ -25,28 +25,12 @@
     margin: 10px;
     padding: 7px;
     padding-inline: 20px;
-    background-color: var(--violetaClaro);
+    background-color: var(--violetaTransparente);
     border: none;
     border-radius: 10px;
     cursor: pointer; /*cambia el logito del mouse*/
 }
-/*
-.contenedorFiltros {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}*/
 
-/*.contenedorProductos {
-botones y cartas de prod
-    display: flex;
-    border: 2px solid;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}*/
 #gridProductos {
 /*contenedor de las cartas*/
     /*margin-top: 100px;*/
@@ -74,7 +58,7 @@ botones y cartas de prod
 }
 
 .cartaProducto {
-    background-color: var(--violetaClaro);
+    background-color: var(--violetaTransparente);
     border-radius: 20px;
     padding: 10px;
 
@@ -111,7 +95,7 @@ botones y cartas de prod
 
 /*  efecto al pasar el mouse */
 .productoBoton:hover {
-    background-color: var(--violetaClaro);
+    background-color: var(--violetaTransparente);
     transform: scale(1.05);
 }
 
@@ -131,7 +115,7 @@ botones y cartas de prod
     position: fixed;
     bottom: 120px; /* SUbi */
     right: 40px;
-    background-color: var(--violetaClaro);
+    background-color: var(--violetaTransparente);
     border: none;
     width: 60px;
     height: 60px;
