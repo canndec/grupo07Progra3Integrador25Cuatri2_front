@@ -21,6 +21,7 @@
     justify-content: center;
     padding: 10px;
 }
+
 #botonConsolas, #botonJuegos, #botonTodo {
     margin: 10px;
     padding: 7px;
@@ -30,6 +31,57 @@
     border-radius: 10px;
     cursor: pointer; /*cambia el logito del mouse*/
 }
+.buscador {
+    position: relative;
+    width: 300px;
+    display: flex;            /* ← AGREGAR */
+    align-items: center;      /* ← AGREGAR */
+}
+.botonBuscar img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    transition: transform .2s ease;
+}
+.botonBuscar {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-left: -35px;       /* ← PARA QUE ENTRE EN EL INPUT */
+    cursor: pointer;
+    display: flex;            /* ← AGREGAR */
+    align-items: center;      /* ← AGREGAR */
+    justify-content: center;  /* ← AGREGAR */
+}
+
+#inputFiltro {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* espacio para la lupa */
+    
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px; /* SUPER redondeado */
+    
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    color: white;
+
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+#inputFiltro::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 9px;
+}
+
+#inputFiltro:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: var(--violetaClaro);
+    box-shadow: 0 0 8px var(--violetaClaro);
+}
+
+
 
 #gridProductos {
 /*contenedor de las cartas*/
