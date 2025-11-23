@@ -1,9 +1,6 @@
 
 let formulario = document.getElementById("formIngreso"); //del login el nombre
 let inputNombre = document.getElementById("inputNombre"); //nombre ingresado
-console.log("Script cargado"); 
-console.log("Formulario:", formulario);
-
 
 formulario.addEventListener("submit", function (event) {
 /**

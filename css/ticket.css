@@ -29,7 +29,6 @@
 
 }
 #infoGeneralTicket {
-    border: 2px solid;
     padding: 10px;
 }
 .ticketTitulo{
@@ -69,4 +68,19 @@
 }
 #botonFinalizar {
     background-color:var(--violetaFinalizar);
+}
+
+/*modo oscuro*/
+.temaOscuro #ticket {
+    border: 2px dotted white;
+}
+.temaOscuro #fechaTicket, .temaOscuro #numeroPedido, .temaOscuro #clienteTicket, .temaOscuro #agradecimientoTicket, .temaOscuro .descripcionProducto {
+    color: white;
+}
+
+.temaOscuro #botonFinalizar {
+    background-color: var(--violetaModoOscuro);
+}
+.temaOscuro .botonDescargar {
+    background-color: var(--verdeModoOscuro);
 }

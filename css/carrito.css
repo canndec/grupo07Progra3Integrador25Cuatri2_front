@@ -8,6 +8,8 @@
 
     --grisVioleta: rgb(208, 189, 219);
 
+    --rojoModoOscuro: rgb(94, 11, 11);
+    --verdeModoOscuro: rgb(24, 107, 24);
 }
 
 .contenedorCarrito {
@@ -24,7 +26,7 @@
     margin: auto;
 }
 #carritoContenedor p, h1 {
-    color: black;
+    color: white;
 }
 
 #contenedorCarritoVacio img {
@@ -45,6 +47,7 @@
 }
 #contenedorCarritoVacio p {
     margin-top: 20px;
+    
 }
 
 .itemCarrito {
@@ -166,4 +169,26 @@ main button {
     background-color: var(--verdeClaro);
     cursor: not-allowed;
     transform: none;
+}
+
+/*modo oscuro*/
+.temaOscuro #carritoContenedor p, .temaOscuro #carritoContenedor h1, .temaOscuro #carritoContenedor h3{
+    color: black;
+}
+
+.temaOscuro .itemCarrito button {
+    background-color: var(--violetaModoOscuro);
+    color: rgb(255, 255, 255);
+}
+.temaOscuro #totalCarrito {
+    color:white ;
+}
+.temaOscuro #vaciarCarrito {
+    background-color: var(--rojoModoOscuro);
+}
+.temaOscuro .volverProductos {
+    background-color: var(--violetaModoOscuro);
+}
+.temaOscuro .botonFinalizar {
+    background-color: var(--verdeModoOscuro);
 }
