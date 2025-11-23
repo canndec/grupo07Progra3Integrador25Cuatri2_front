@@ -4,7 +4,8 @@
     --violetaOscuro:  #5e319d; /*LO QUE ES LA TECNOLOGIA*/
     --violetaTransparente : rgba(100, 47, 150, 0.692);
 
-
+    --fondoModoOscuro: rgb(25, 9, 36);
+    --violetaModoOscuro: rgb(45, 4, 71);
 }
 * {
     margin: 0;
@@ -114,3 +115,24 @@ footer {
     filter: invert(100%);
 }
 
+/*modo oscuro*/
+body.temaOscuro {
+    background-color: var(--fondoModoOscuro);
+}
+.temaOscuro #entradaLogin {
+    background-color: var(--violetaModoOscuro);    
+}
+.temaOscuro #formIngreso{
+    filter: invert(100%);
+    
+}
+.temaOscuro footer p{
+    filter: invert(100%);
+}
+
+.temaOscuro .logoFooter{
+    filter: invert(0%); /*vuelve a su color normal que antes ya fue modificado*/
+}
+.temaOscuro .botonTema img {
+    filter: invert(0%);
+}

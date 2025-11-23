@@ -142,6 +142,7 @@ function actualizarContadorCarrito() {
 }
 
 
+
 function init(){
     obtenerProductos();
     actualizarContadorCarrito(); // <<< AGREGUE el CONTADOR!! Y SAQUE LO QUE TENIAS ---nao nao

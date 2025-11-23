@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos de la tienda - JoyStiq</title>
     <link rel="icon" href="img/logoSinFondo.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!--este es el general-->
-    <link rel="stylesheet" href="css/productos.css" />
-    <!--especifico de la vista-->
+    <link rel="stylesheet" href="css/style.css" /><!--este es el general-->
+    <link rel="stylesheet" href="css/productos.css" /><!--especifico de la vista-->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"rel="stylesheet"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet"><script defer src="js/productos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+    <script defer src="js/productos.js"></script>
+    <script defer src="js/tema.js"></script>
   </head>
   <body>
     <header>
-      <img
-        class="logoConNombre"
-        src="img/logoSinFondoClaro.png"
-        alt="JoyStiq-logo"
-      />
+      <img class="logoConNombre" src="img/logoSinFondoClaro.png" alt="JoyStiq-logo" />
       <!--<img id="lupa"src="img/lupa.png" alt="busqueda"> -->
       <input id="inputFiltro" type="text" placeholder="Busca productos..." />
       <h1 id="nombreCliente"></h1>
-      <button class="botonTema"><img src="img/modoOscuro.png" alt="TemaDispositivo"></button>  
+      <button class="botonTema" id="botonTema"><img src="img/modoOscuro.png" alt="TemaDispositivo"></button>  
     </header>
     <main>
       <section class="contenedorPrincipal">
