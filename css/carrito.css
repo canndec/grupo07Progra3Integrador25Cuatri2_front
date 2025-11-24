@@ -192,3 +192,9 @@ main button {
 .temaOscuro .botonFinalizar {
     background-color: var(--verdeModoOscuro);
 }
+.temaOscuro #contenedorCarritoVacio {
+    background-color:var(--violetaModoOscuro);
+}
+.temaOscuro #contenedorCarritoVacio p {
+    color: white;
+}

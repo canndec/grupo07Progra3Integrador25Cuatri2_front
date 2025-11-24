@@ -43,7 +43,6 @@ botonParaConsolas.addEventListener("click", function(){
     mostrarProductos(consolas);
 });
 
-// funciones generales de la vista
 let botonParaJuegos = document.getElementById("botonJuegos");
 botonParaJuegos.addEventListener("click", function(){
     let juegos = productos.filter(p => p.categoria === "juego"); ////LE SAQUE LA S SINO NO ME FUNCIONABA EN MI BD TENGO JUEGO NO JUEGOS
@@ -57,6 +56,7 @@ botonTodosProd.addEventListener("click", function(){
     mostrarProductos(productos);
 })
 
+// funciones generales de la vista
 ///paginacion
 
 let posicion = 0; //de donde empieza que despues va a incrementar cuando se seleccione la flechita
