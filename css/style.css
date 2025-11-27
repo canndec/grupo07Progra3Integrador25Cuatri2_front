@@ -60,20 +60,19 @@ header {
 
 main {
     flex: 1;
-    /*;*/
     display: flex;           
     justify-content: center; 
     align-items: flex-start; /*para centrar vertical*/
-    /*padding: 20px;*/
 }
 #entradaLogin {
     padding: 40px 20px;
     background-color: var(--violetaTransparente);
     flex-wrap: wrap;
-    width: 90%;
+    max-width: 450px;
     display: flex;
     justify-content: center;
-    max-width: 450px;
+    align-items: center;
+    text-align: center;
     margin-top: 150px;
 }
 #entradaLogin h1, #entradaLogin h2 {
