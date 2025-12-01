@@ -74,6 +74,7 @@ main {
     align-items: center;
     text-align: center;
     margin-top: 150px;
+    border-radius: 20px;
 }
 #entradaLogin h1, #entradaLogin h2 {
     margin-bottom: 20px;
