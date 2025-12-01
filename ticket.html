@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gracias por su compra!</title>
+    <!--para usar pdf-->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
     <link rel="icon" href="img/logoSinFondo.png" >
     <link rel="stylesheet" href="css/ticket.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,7 +27,6 @@
                     <h1 class="ticketTitulo">JoyStiq</h1>
                     <p id="fechaTicket">Fecha y hora</p> <!--traido de js tamb-->
                     <div id="infoClienteYPedido">
-                        <h2 id="numeroPedido">N°Pedido:(autoincremental)</h2> <!--manejo en js-->
                         <p id="clienteTicket"></p> <!-- " " -->
                     </div>
                 </div>
@@ -36,10 +38,8 @@
                     <h3 id="agradecimientoTicket">¡Muchas gracias por su compra!</h3>
                 </div>
             </div>
-                <div id="contenedorBotonesFinalizar">     
-                    <button class="botonDescargar" id="descargarPdf">Descargar .PDF</button>
-                    <button class="botonDescargar" id="descargarExcel">Descargar .excel</button>
-                    <button id="botonFinalizar" >Finalizar</button>
+                <div id="contenedorBotonesFinalizar">    
+                    <button id="botonFinalizar" >Finalizar y descargar .PDF</button>
                 </div>    
             </section>
                 
