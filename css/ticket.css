@@ -1,86 +1,149 @@
 :root {
-    --celesteClaro:  rgb(161, 227, 247);
+    --celesteClaro: rgb(161, 227, 247);
     --violetaFinalizar: rgb(85, 85, 177);
+
+    --grisFondo: #f7f7f7;
+    --grisTexto: #333;
+
+    --fondoOscuro: #1a1a1a;
+    --textoOscuro: #f0f0f0;
 }
 
-#ticket {
-    border: 2px dotted;
-}
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
 #contenedorTicket {
-    /*border: 4px solid red;*/
     margin: 30px auto;
-    max-height: 500px;
     width: 650px;
+    max-height: 500px;
 
+    background: var(--grisFondo);
+    border-radius: 10px;
+    padding: 20px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,.15);
 }
 
-#fechaTicket, #numeroPedido, #clienteTicket, #agradecimientoTicket{
+/* ===========================
+   TICKET INTERNO
+=========================== */
+#ticket {
+    border: 2px dotted var(--violetaPrincipal);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.ticketTitulo {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--violetaPrincipal);
+}
+
+/* ===========================
+   TEXTOS
+=========================== */
+#fechaTicket,
+#numeroPedido,
+#clienteTicket,
+#agradecimientoTicket {
+    font-size: 18px;
     color: black;
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin: 3px 0;
 }
+
+/* ===========================
+   INFO DEL CLIENTE Y PEDIDO
+=========================== */
 #infoClienteYPedido {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-
+    margin: 15px 0;
 }
+
 #infoGeneralTicket {
     padding: 10px;
 }
-.ticketTitulo{
-    font-size: larger;
-    color: var(--violetaPrincipal);
-    text-align:center;
-    margin: 5px;
-}
 
-
-/*ticket*/
+/* ===========================
+   PRODUCTO INDIVIDUAL
+=========================== */
 #contenedorDeProducto {
-    /* contenedor de info por producto, su nombre,subtotal y cantidad*/
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
+    border-bottom: 1px dashed #888;
+    padding: 6px 0;
 }
+
 .descripcionProducto {
-    /*esta clase esta con el nombre, cantidad y subtotal*/
-    display: flex;
     color: black;
-    padding: 4px;
+    font-family: Arial, sans-serif;
 }
 
-/*descargar y Finalizar*/
+/* ===========================
+   BOTONES
+=========================== */
 #contenedorBotonesFinalizar {
-    text-align: right; /*todo a la derecha*/
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
 }
 
-#contenedorBotonesFinalizar button{
-    padding: 9px;
+#contenedorBotonesFinalizar button {
+    padding: 10px 14px;
+    font-size: 15px;
     cursor: pointer;
-}
-.botonDescargar {
-    background-color: var(--verdeClaro);
-}
-#botonFinalizar {
-    background-color:var(--violetaFinalizar);
+    border: none;
+    border-radius: 6px;
+    transition: .2s;
 }
 
-/*modo oscuro*/
-.temaOscuro #ticket {
+/* Descargar */
+.botonDescargar {
+    background-color: var(--violetaClaro);
+    color: white;
+}
+.botonDescargar:hover {
+    background-color: var(--violetaPrincipal);
+}
+
+/* Finalizar */
+#botonFinalizar {
+    background-color: var(--violetaOscuro);
+    color: white;
+}
+#botonFinalizar:hover {
+    filter: brightness(1.15);
+}
+
+/* ===========================
+   MODO OSCURO 
+=========================== */
+body.temaOscuro #contenedorTicket {
+    background: var(--fondoModoOscuro);
+    box-shadow: 0 0 8px rgba(255,255,255,.06);
+}
+
+body.temaOscuro #ticket {
     border: 2px dotted white;
 }
-.temaOscuro #fechaTicket, .temaOscuro #numeroPedido, .temaOscuro #clienteTicket, .temaOscuro #agradecimientoTicket, .temaOscuro .descripcionProducto {
+body.temaOscuro #fechaTicket,
+body.temaOscuro #numeroPedido,
+body.temaOscuro #clienteTicket,
+body.temaOscuro #agradecimientoTicket,
+body.temaOscuro .descripcionProducto {
     color: white;
 }
 
-.temaOscuro #botonFinalizar {
+body.temaOscuro #botonFinalizar {
     background-color: var(--violetaModoOscuro);
 }
-.temaOscuro .botonDescargar {
-    background-color: var(--verdeModoOscuro);
+
+body.temaOscuro .botonDescargar {
+    background-color: var(--violetaClaro);
 }

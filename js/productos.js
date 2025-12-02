@@ -11,7 +11,7 @@ document.getElementById("nombreCliente").textContent = nombreDeCliente ? `¡Hola
 // FUNCION OBTENER LOS PRODUCTOS PARA QUE FUNCIONE TODO 
 async function obtenerProductos(){
     try{
-        console.log("pruebaprueba")
+        console.log("Prueba de traer productos")
         let response = await fetch(`${url}/api/productos`);
         console.log(`Solicitud fetch GET a ${url}/api/productos`);
 
@@ -43,6 +43,7 @@ botonParaConsolas.addEventListener("click", function(){
     mostrarProductos(consolas);
 });
 
+// funciones generales de la vista
 let botonParaJuegos = document.getElementById("botonJuegos");
 botonParaJuegos.addEventListener("click", function(){
     let juegos = productos.filter(p => p.categoria === "juego"); ////LE SAQUE LA S SINO NO ME FUNCIONABA EN MI BD TENGO JUEGO NO JUEGOS
@@ -56,7 +57,6 @@ botonTodosProd.addEventListener("click", function(){
     mostrarProductos(productos);
 })
 
-// funciones generales de la vista
 ///paginacion
 
 let posicion = 0; //de donde empieza que despues va a incrementar cuando se seleccione la flechita
@@ -64,28 +64,27 @@ let limiteAMostrar = 4; //limite de productos a mostrar para paginacion
 let arrayActual = productos;
 
 function mostrarProductos(array){
-    arrayActual = array;  // cada vez que se llama a mostrar productos, actualiza el array actual
+      arrayActual = array;  // cada vez que se llama a mostrar productos, actualiza el array actual
 
-    let productosActivos = arrayActual.filter(p => p.activo === 1); //filtra antes para hacer bien la paginacion
-    let productosAMostrar = productosActivos.slice(posicion, posicion + limiteAMostrar); // basicamente corta desde la posicion hasta el limite a mostrar
-    
-    // solo se muestran los que estan activos
-    let htmlProductos = "";
+    let limiteProductos = array.slice(posicion, posicion + limiteAMostrar); // basicamente corta desde la posicion hasta el limite a mostrar
 
-    productosAMostrar.forEach( p => {
-        htmlProductos += `
-            <div class="cartaProducto">
+    let htmlProductos = limiteProductos.map( p =>`
+        <div class="cartaProducto">
             <img class="productoImagen"src="${p.imagen}" alt="${p.nombre}">
             <h3>${p.nombre}</h3>
             <p>$${p.precio}</p>
+            <p> ${hayStock(p.activo)}</p>  
             <button class="productoBoton" onclick="agregarACarrito(${p.id}, ${p.activo})">Agregar al carrito</button>
-            </div>`
-    });
-    
-    //aca solo muestra los productos hasta "limite" puesto
+        </div>`).join(""); 
+
+// NO SE SI OBLIGATORIAMENTE NO SE TIENE Q MOSTRAR EL PROD , o que con no hay stock tabien
+
+            //aca solo muestra los productos hasta "limite" puesto
     gridProductos.innerHTML = htmlProductos !== "" ? htmlProductos : `<p>No se encontraron productos</p>`;
 }
-
+function hayStock(activo){
+    return activo == 1 ? `Disponible` : `No hay stock`;
+}
 
 //esto es para la paginacion
 let botonAtras = document.getElementById("botonAtras");
@@ -159,4 +158,4 @@ function init(){
     actualizarContadorCarrito(); // <<< AGREGUE el CONTADOR!! Y SAQUE LO QUE TENIAS ---nao nao
 
 }
-document.addEventListener("DOMContentLoaded", init); ///
+document.addEventListener("DOMContentLoaded", init); /// INICIO DE TODO EL JS CUANDO CARGA EL DOCUEMNTO

@@ -15,12 +15,15 @@ formulario.addEventListener("submit", async function (event) {
     }
     
     console.log("Validado correctamente:", nombreIngresado);
+    localStorage.setItem("nombreDeCliente", nombreIngresado);
+
+
     
     
     //  HOLA SOY SANTIAGO -  HAGO EL FETCH PARA GUARDAR EL USUARIO EN LA BASE DE DATOS
     try {
-        const response = await fetch("http://localhost:3500/api/usuarios/crear-sin-password", {
-            method: "POST",
+        const response = await fetch("http://localhost:3500/api/usuarios/crear-sin-password",
+         {            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },

@@ -173,7 +173,7 @@ main button {
 
 /*modo oscuro*/
 .temaOscuro #carritoContenedor p, .temaOscuro #carritoContenedor h1, .temaOscuro #carritoContenedor h3{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .temaOscuro .itemCarrito button {
