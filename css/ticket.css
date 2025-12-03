@@ -42,7 +42,7 @@
 }
 
 /* ===========================
-   TEXTOS
+    TEXTOS
 =========================== */
 #fechaTicket,
 #numeroPedido,
@@ -57,7 +57,7 @@
 }
 
 /* ===========================
-   INFO DEL CLIENTE Y PEDIDO
+    INFO DEL CLIENTE Y PEDIDO
 =========================== */
 #infoClienteYPedido {
     display: flex;
@@ -70,7 +70,7 @@
 }
 
 /* ===========================
-   PRODUCTO INDIVIDUAL
+    PRODUCTO INDIVIDUAL
 =========================== */
 #contenedorDeProducto {
     display: flex;
@@ -85,7 +85,7 @@
 }
 
 /* ===========================
-   BOTONES
+    BOTONES
 =========================== */
 #contenedorBotonesFinalizar {
     display: flex;
@@ -122,7 +122,7 @@
 }
 
 /* ===========================
-   MODO OSCURO 
+    MODO OSCURO 
 =========================== */
 body.temaOscuro #contenedorTicket {
     background: var(--fondoModoOscuro);
