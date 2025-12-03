@@ -136,3 +136,25 @@ body.temaOscuro {
 .temaOscuro .botonTema img {
     filter: invert(0%);
 }
+/*RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        justify-content: center;
+        padding-bottom: 10px; /* Un poco de aire abajo */
+    }
+
+    .buscador {
+        margin: 10px 0 10px 0; 
+    }
+
+
+    .logoConNombre {
+        margin: 20px 0 10px 0;
+    }
+
+    .botonTema {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}

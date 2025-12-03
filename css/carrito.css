@@ -13,11 +13,11 @@
 }
 
 .contenedorCarrito {
-    /*max-width: 900px;*/
-    margin: 30px 80px;
+    width: 95%; /* Ocupa casi todo el ancho en celular */
+    max-width: 900px; /* Pero no te pases de 900px en PC */
+    margin: 30px auto; /* Centrado automático */
     text-align: center;
 }
-
 /*cuando esta lleno*/
 #carritoContenedor {
     display: flex;
@@ -25,9 +25,10 @@
     gap: 20px;
     margin: auto;
 }
-#carritoContenedor p, h1 {
+#carritoContenedor p, h1, #totalCarrito {
     color: white;
 }
+
 
 #contenedorCarritoVacio img {
     margin: auto;
@@ -41,8 +42,10 @@
     justify-content: center;
     gap: 20px;
     border-radius: 25px;
-    width: 800px;
-    height: 280px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 40px 20px;
     background-color: var(--grisVioleta);
 }
 #contenedorCarritoVacio p {
@@ -51,20 +54,18 @@
 }
 
 .itemCarrito {
-    width: 700px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; 
+    align-items: center; /* Centra todo */
     background: var(--violetaTransparente);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Para que el padding no rompa el ancho */
+    gap: 15px; /* Espacio entre cada cosa (imagen, título, etc.) */
 }
 
-.itemCarrito img, .itemCarrito h3, .itemCarrito p, .itemCarrito button {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 8px;
-}
+
 .itemCarrito button{
     padding: 5px 7px;
     border-radius: 5px;
@@ -75,23 +76,48 @@
     font-size: x-small;
 }
 .itemCarrito img {
-    width: 100px;
+    width: 120px; /* Imagen un poco más grande en celular */
     border-radius: 10px;
 }
-
 .itemCarrito h3 {
-    flex: 1;
-    margin-left: 20px;
+    margin: 0; /* Quitamos márgenes raros */
+    text-align: center;
     font-family: "Lexend Exa", sans-serif;
+    font-size: 1.2rem; /* Título legible */
 }
-
+.itemCarrito p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
 #totalCarrito {
     font-size: 15px;
     margin-top: 20px;
     font-weight: bold;
     color: black;
 }
-
+.cantidadControles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+.cantidadControles button {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+}
+.cantidadControles span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+.itemCarrito > button {
+    width: 100%; /* Que ocupe todo el ancho para ser fácil de tocar */
+    padding: 12px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
 
 /*BOTONESSSSS - ordené por que se pisaban los estilos*/
 
@@ -198,3 +224,4 @@ main button {
 .temaOscuro #contenedorCarritoVacio p {
     color: white;
 }
+
