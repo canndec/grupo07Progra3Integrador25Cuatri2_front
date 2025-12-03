@@ -64,27 +64,28 @@ let limiteAMostrar = 4; //limite de productos a mostrar para paginacion
 let arrayActual = productos;
 
 function mostrarProductos(array){
-      arrayActual = array;  // cada vez que se llama a mostrar productos, actualiza el array actual
+    arrayActual = array;  // cada vez que se llama a mostrar productos, actualiza el array actual
 
-    let limiteProductos = array.slice(posicion, posicion + limiteAMostrar); // basicamente corta desde la posicion hasta el limite a mostrar
+    let productosActivos = arrayActual.filter(p => p.activo === 1); //filtra lo que esta activo antes de paginacion
+    let productosAMostrar = productosActivos.slice(posicion, posicion + limiteAMostrar); // basicamente corta desde la posicion hasta el limite a mostrar
 
-    let htmlProductos = limiteProductos.map( p =>`
-        <div class="cartaProducto">
-            <img class="productoImagen"src="${p.imagen}" alt="${p.nombre}">
-            <h3>${p.nombre}</h3>
-            <p>$${p.precio}</p>
-            <p> ${hayStock(p.activo)}</p>  
-            <button class="productoBoton" onclick="agregarACarrito(${p.id}, ${p.activo})">Agregar al carrito</button>
-        </div>`).join(""); 
+    let htmlProductos = ""; //para mostrar ativos
+    productosAMostrar.forEach( p => {
+        htmlProductos += `
+            <div class="cartaProducto">
+                <img class="productoImagen"src="${p.imagen}" alt="${p.nombre}">
+                <h3>${p.nombre}</h3>
+                <p>$${p.precio}</p>
+                <button class="productoBoton" onclick="agregarACarrito(${p.id}, ${p.activo})">Agregar al carrito</button>
+            </div>`; 
+        });
 
 // NO SE SI OBLIGATORIAMENTE NO SE TIENE Q MOSTRAR EL PROD , o que con no hay stock tabien
 
             //aca solo muestra los productos hasta "limite" puesto
     gridProductos.innerHTML = htmlProductos !== "" ? htmlProductos : `<p>No se encontraron productos</p>`;
 }
-function hayStock(activo){
-    return activo == 1 ? `Disponible` : `No hay stock`;
-}
+
 
 //esto es para la paginacion
 let botonAtras = document.getElementById("botonAtras");
